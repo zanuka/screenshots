@@ -46,6 +46,9 @@ class Config {
     if (config['devices']['ios'] != null) {
       // check simulators
       final Map simulators = utils.getIosDevices();
+
+      print('simultors = $simulators');
+
       for (String deviceName in config['devices']['ios']) {
         // check screen available for this device
         screenAvailable(screens, deviceName);
@@ -109,12 +112,15 @@ class Config {
     // check simulator installed
     bool simulatorInstalled = false;
     simulators.forEach((simulatorName, iOSVersions) {
-      //          print('device=$device, simulator=$simulator');
+      print('device=$deviceName, simulator=$simulator');
       if (simulatorName == deviceName) {
         // check for duplicate installs
-        //            print('os=$os');
+        // print('os=$iOSVersions');
 
         final iOSVersionName = utils.getHighestIosVersion(iOSVersions);
+
+        print('iOSVersionName=$iOSVersionName');
+
         final udid = iOSVersions[iOSVersionName][0]['udid'];
         // check for device present with multiple os's
         // or with duplicate name

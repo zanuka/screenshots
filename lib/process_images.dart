@@ -105,12 +105,14 @@ void frame(Map config, Map screen, String screenshotPath) async {
 
   final framePath = config['staging'] + '/' + resources['frame'];
   final size = screen['size'];
+  final background = screen['background'];
   final resize = screen['resize'];
   final offset = screen['offset'];
 
   final options = {
     'framePath': framePath,
     'size': size,
+    'background': background,
     'resize': resize,
     'offset': offset,
     'screenshotPath': screenshotPath,
