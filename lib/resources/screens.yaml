@@ -20,17 +20,9 @@ ios:
       frame: resources/ios/phones/iPhone_X_Space_Grey.png
     offset: -0-0
     devices:
-      # - iPhone X
+      - iPhone X
       - iPhone XS
-  6.5inch:
-    size: 1242x2688
-    resize: 75%
-    resources:
-      statusbar: resources/ios/1242/statusbar_black.png
-      frame: resources/ios/phones/iPhone_XS_Max_Space_Grey.png
-    offset: -0-0
-    devices:
-      - iPhone XS Max
+      - iPhone XS Max # actually 6.5 inches, but has same screen ratio
   12.9inch:
     size: 2048x2732
     resize: 86%
@@ -40,7 +32,7 @@ ios:
     offset: -0-0
     devices:
       - iPad Pro (12.9-inch) (2nd generation)
-      # - iPad Pro (12.9-inch) (3rd generation)
+      - iPad Pro (12.9-inch) (3rd generation)
 android:
   5.2inch:
     size: 1080x1920
