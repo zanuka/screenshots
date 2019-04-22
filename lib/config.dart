@@ -47,7 +47,7 @@ class Config {
       // check simulators
       final Map simulators = utils.getIosDevices();
 
-      print('simultors = $simulators');
+      // print('simulators = $simulators');
 
       for (String deviceName in config['devices']['ios']) {
         // check screen available for this device
@@ -112,7 +112,7 @@ class Config {
     // check simulator installed
     bool simulatorInstalled = false;
     simulators.forEach((simulatorName, iOSVersions) {
-      print('device=$deviceName, simulator=$simulator');
+      // print('device=$deviceName, simulator=$simulator');
       if (simulatorName == deviceName) {
         // check for duplicate installs
         // print('os=$iOSVersions');
